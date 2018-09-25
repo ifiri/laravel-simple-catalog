@@ -45,7 +45,7 @@ class SyncWithFillableFields
         $modelFields = $Model->attributesToArray();
 
         foreach ($modelFields as $key => $value) {
-            if(!in_array($key, $fillables)) {
+            if(!in_array($key, $syncFields)) {
                 unset($Model->{$key});
             }
         }
