@@ -1,0 +1,103 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+:root {
+    font-family: Nunito, sans-serif;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    min-height: 100vh;
+}
+
+
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.grid {
+    text-align: center;
+}
+
+.product {
+    @include make-col(3);
+
+    &__title {
+        min-height: 3rem * 1.2;
+        line-height: 1.2;
+    }
+
+    &__thumbnail {
+        max-height: 100px;
+        max-width: 100%;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &__category {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid #cecece;
+        border-bottom: 1px solid #cecece;
+
+        a:not(:last-child)::after {
+            content: ", ";
+        }
+    }
+}
+
+.search {
+    display: flex;
+    width: 100%;
+
+    &__input {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.header {
+    .navbar {
+        @include make-container-max-widths();
+
+        margin: 0 auto;
+    }
+}
